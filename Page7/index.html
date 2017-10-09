@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Siaip viskas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+ 
+</head>
+<body>
+
+
+        
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+
+
+
+                    <table  class="table table-inverse">
+                  <thead>
+                    <tr>
+                      <th>Pirmas </th>
+                      <th>Antras</th>
+                      <th>Trecias</th>
+                      <th>Ketivrtas</th>
+                    </tr>
+                  </thead>
+                   <tbody id="table">
+                   </tbody>
+                </table>
+                    
+                </div>
+                <div class="col">
+                     <input class="form-control" type="text" id="arg1" placeholder="Pirmas">
+                     <input class="form-control" type="text" id="arg2" placeholder="Antras">
+                     <input class="form-control" type="text" id="arg3" placeholder="Trecias">
+                     <input class="form-control" type="text" id="arg4" placeholder="Ketvirtas">
+                     <button onclick="addToTable()">Pirmyn</button> 
+                </div>
+            </div>
+        </div>
+
+    <script>
+        var table = document.getElementById("table");
+
+        function addToTable() {
+
+            var tr = table.insertRow(0);
+             var data = new Date();
+
+            var td0 = tr.insertCell(0);
+            var td1 = tr.insertCell(1);
+            var td2 = tr.insertCell(2);
+            var td3 = tr.insertCell(3);
+            var td4 = tr.insertCell(4);
+
+            td0.innerHTML= document.getElementById('arg1').value;
+            td1.innerHTML= document.getElementById('arg2').value;
+            td2.innerHTML= document.getElementById('arg3').value;
+            td3.innerHTML= document.getElementById('arg4').value;
+           
+            td4.innerHTML= data.getFullYear()+"-"+data.getMonth();
+                  
+        }
+
+
+
+       
+    </script>
+
+</body>
+
+</html>

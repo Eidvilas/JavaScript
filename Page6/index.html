@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>tyres</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+ 
+</head>
+<body>
+    <input type="text" id="diameter" placeholder="Rim diameter">
+    <input type="text" id="tyre" placeholder="Tyre height">
+    <input type="text" id="arc" placeholder="Arc diameter">
+    <div id="result">0</div>
+ 
+    <script>
+        document.getElementById('diameter').addEventListener("change", calc);
+        document.getElementById('tyre').addEventListener("change", calc);
+        document.getElementById('arc').addEventListener("change", calc);
+
+
+        td0.innerHTML=
+        td1.innerHTML=
+        td2.innerHTML=
+        td3.innerHTML=
+
+ 
+        function calc() {
+            var diameter_cm = document.getElementById('diameter').value * 2.54;
+            var tyre_cm = document.getElementById('tyre').value / 10;
+            var arc_cm = document.getElementById('arc').value;
+ 
+            var result = diameter_cm  + 2*tyre_cm;
+            document.getElementById('result').innerHTML = result;
+ 
+            if (result > arc_cm) {
+                document.getElementById('result').style.backgroundColor = "red";
+            } else {
+                document.getElementById('result').style.backgroundColor = "green";
+            }
+        }
+    </script>
+
+    <table class="table">
+		  <thead>
+		    <tr>
+		      <th>Rim diametre in inches</th>
+		      <th>Tyre height in mm</th>
+		      <th>Arc diametre in cm</th>
+		      <th>telpa</th>
+		    </tr>
+		  </thead>
+		  <tbody id="rows">
+		    <tr>
+		      <td></td>
+		      <td></td>
+		      <td></td>
+		      <td></td>
+		    </tr>
+		  </tbody>
+		</table>
+
+</body>
+
+</html>
